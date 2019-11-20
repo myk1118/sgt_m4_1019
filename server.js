@@ -6,10 +6,25 @@ app.use(express.json());
 
 app.get('/api/students', async (req, res) => {
     // const result = await db.query('SELECT * FROM grades');
-    // [[Row Data], [Field Data]]
+    // [[Row Data], [Field Data]];
     const [result] = await db.query('SELECT * FROM grades');
     res.send({
         students: result
+    });
+});
+
+app.get('/api/students/:id', async (req, res) => {
+    const {
+        id
+    } = req.params;
+
+    // Write a JOIN query to get a grade record and related assignments
+    // Send data back in response
+    // If no data was found record property should be NULL
+
+    res.send({
+        message: `Get a grade record and assignments for grade ID: ${id}`,
+        record: {}
     });
 });
 
