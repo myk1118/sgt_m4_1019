@@ -2,7 +2,7 @@ $(document).ready(initApp);
 
 function initApp() {
     console.log("App Initialized");
-    $("#add-student").on('submit', submitFormData);
+    $("#add-form").on('submit', submitFormData);
     getStudents();
 }
 
