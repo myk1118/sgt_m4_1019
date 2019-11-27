@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Grade Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
@@ -13,36 +15,37 @@
 
 <body>
     <h1 class="center">Student Grade Table</h1>
+    <div class="row px-4">
+        <form class="col-4" id="add-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label>Course</label>
+                <input class="form-control" type="text" id="course">
+            </div>
+            <div class="form-group">
+                <label>Grade</label>
+                <input class="form-control" type="text" id="grade">
+            </div>
+            <div class="text-right">
+                <button class="btn btn-outline-primary">Add Student</button>
+            </div>
+        </form>
 
-    <form id="add-form">
-        <div>
-            <label>Name</label>
-            <input type="text" id="name">
-        </div>
-        <div>
-            <label>Course</label>
-            <input type="text" id="course">
-        </div>
-        <div>
-            <label>Grade</label>
-            <input type="text" id="grade">
-        </div>
-        <div>
-            <button>Add Student</button>
-        </div>
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Student Name</th>
-                <th>Course</th>
-                <th>Grade</th>
-            </tr>
-        </thead>
-        <tbody id="student-data">
-        </tbody>
-    </table>
+        <table class="table col-8">
+            <thead class="thead-light">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="student-data">
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
